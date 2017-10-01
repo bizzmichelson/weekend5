@@ -1,7 +1,6 @@
+var rentModel = require('../models/rentModel');
 var router = require('express').Router();
-var rentSchema = require('../models/rentModel');
 var mongoose = require('mongoose');
-
 
 
 router.get('/', function(req, res){

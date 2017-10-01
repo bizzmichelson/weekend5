@@ -8,9 +8,4 @@ router.use('/sale', sale);
 
 
 
-
-
-
-
-
 module.exports = router;
