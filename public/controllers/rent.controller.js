@@ -1,6 +1,12 @@
 myApp.controller('RentController', function(RentService){
     var vm = this;
-    RentService.getRent();
+    RentService.getRent().then(function(response){
+        vm.rentals = response.data;
+        return console.log('getting rentals', vm.rentals);
+
+    }).catch(function(err){
+        return console.error(err);
+    })
     console.log('RentController');
 
     vm.addRent = function() {
@@ -8,7 +14,7 @@ myApp.controller('RentController', function(RentService){
         var rentToAdd = {
             sqft: sqftIn,
             city: cityIn,
-            rentcost: vm.rentIn 
+            rent: rentIn 
         };
         RentService.addRent(rentToAdd);
     };
@@ -16,12 +22,6 @@ myApp.controller('RentController', function(RentService){
     vm.handfulOfRent = RentService.rentStuff;
 
 })
-
-
-
-
-
-
 
 
 

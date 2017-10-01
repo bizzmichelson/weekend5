@@ -10,6 +10,9 @@ myApp.config(function($routeProvider, $locationProvider) {
         }).when('/rent', {
         templateUrl: 'views/rent.html',
         controller: 'RentController as rc'
+    }).when('/sale', {
+        templateUrl: 'views/sale.html',
+        controller: 'SaleController as sc'
     }).otherwise('/404');
     
     // this is only for removing #!
