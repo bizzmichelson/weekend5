@@ -8,6 +8,21 @@ margin: 20px;
 ul {
     list-style: none;
 }
+#viewRent{
+    padding: 20px;
+    margin: 10px;
+}
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    font: orange;
+}
+
+/* a{
+    color:blue;
+    font-size: 20pt;
+    text-align: left;
+    padding: 20px;
+} */
 
 
 
