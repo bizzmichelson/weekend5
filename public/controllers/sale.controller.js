@@ -1,10 +1,10 @@
 // db.getCollection('listings').find({cost: {$exists:true}});
 
-myApp.controller('SaleController', function(SalesService){
+myApp.controller('SaleController', ['listingService',function(listingService){
     var vm = this;
-    SalesService.getSales().then(function(response){
+    listingService.getSales().then(function(response){
         vm.sales = response.data;
-        return console.log('getting rentals', vm.sales);
+        return console.log('getting sales', vm.sales);
 
     }).catch(function(err){
         return console.error(err);
@@ -12,15 +12,15 @@ myApp.controller('SaleController', function(SalesService){
     console.log('SaleController');
 
     vm.addSales = function() {
-        console.log('in addSales of Rent Controller');
+        console.log('in addSales of Sale Controller');
         var salesToAdd = {
             sqft: sqftIn,
             city: cityIn,
             cost: costIn 
         };
-        SalesService.addSales(salesToAdd);
+        listingService.addSales(salesToAdd);
     };
 
-    vm.handfulOfSales = SalesService.salesStuff;
+    vm.handfulOfSales = listingService.salesStuff;
 
-})
+}])

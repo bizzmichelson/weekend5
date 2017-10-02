@@ -1,11 +1,12 @@
 <section id="viewRent">
-        <div ng-repeat="rent in sc.sale">
-                <div>SQFT: {{sale.sqft}}</div>
-                <div>City: {{sale.city}}</div>
-                <!-- <button ng-click="rc.toggleRent()">Show punchline</button>             -->
-                <div>Monthly Cost: {{sale.cost}}</div>
-                <!-- <button ng-click="rc.previousRiddle()">Previous</button> -->
-          
-                <!-- <button ng-click="rc.nextRiddle()">Next</button> -->
+                <img src="https://static.pexels.com/photos/106399/pexels-photo-106399.jpeg" style="width:304px;height:228px;">>
+                 <div ng-repeat="sale in sc.sales">
+                <ul class="list-group">
+                        <div class="row justify-content-md-left">
+                                <div class="col col-lg-2">
+                <li class="list-group-item">SQFT: {{sale.sqft}}</li>
+                <li class="list-group-item">City: {{sale.city}}</li>
+                <li class="list-group-item">Cost: {{sale.cost}}</li>
+                </ul>
             <div>
     </section>

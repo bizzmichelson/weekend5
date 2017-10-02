@@ -1,6 +1,6 @@
-myApp.controller('RentController', function(RentService){
+myApp.controller('RentController',['listingService', function(listingService){
     var vm = this;
-    RentService.getRent().then(function(response){
+    listingService.getRent().then(function(response){
         vm.rentals = response.data;
         return console.log('getting rentals', vm.rentals);
 
@@ -16,12 +16,12 @@ myApp.controller('RentController', function(RentService){
             city: cityIn,
             rent: rentIn 
         };
-        RentService.addRent(rentToAdd);
+        listingService.addRent(rentToAdd);
     };
 
-    vm.handfulOfRent = RentService.rentStuff;
+    vm.handfulOfRent = listingService.rentStuff;
 
-})
+}])
 
 
 

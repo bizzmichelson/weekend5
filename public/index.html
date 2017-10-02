@@ -18,27 +18,30 @@
         
 
     <title>Real Estate</title>
+    
 </head>
 <body ng-app="myApp">
+        <div class ="container-fluid">
+
+        <div class="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
+                        
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/rent">See Rent Listings</a>
+                    </li>
+                    <li> <a href="/sale">See Sale Listings</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+        
 <main ng-view> 
-                       
-
-
+                            
 </main>   
-<div class="navbar">
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/rent">See Rent Listings</a>
-            </li>
-            <li> <a href="/sale">See Sale Listings</a>
-            </li>
-        </ul>
-    </div>   
 
-
-    <div> I'm a footer </div>
 </body>
 </html>

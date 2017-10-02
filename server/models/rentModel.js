@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
+
 // var rentModel = mongoose.model('rentModel', rentSchema);
-var rentModel = mongoose.model('rentModel', rentSchema, 'listings');
 
 
 var rentSchema = new mongoose.Schema({
@@ -10,5 +10,9 @@ var rentSchema = new mongoose.Schema({
     rent: Number
 });
 
-module.exports = rentSchema;
+
+var Rent = mongoose.model('Rent', rentSchema, 'listings');
+
+
+module.exports = Rent;
 
